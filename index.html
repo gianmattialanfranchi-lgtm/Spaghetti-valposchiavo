@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spaghetti, Salsa di Pomodoro e Pesteda della Valposchiavo – Genuss aus dem Val Poschiavo, persönlich vom Inhaber geliefert. CHF 24.90 pro Paket.">
+  <title>Genuss aus dem Val Poschiavo | Pasta-Paket</title>
+  <style>
+    :root{
+      --green:#3f5d32; --dark:#24301f; --red:#a92824; --cream:#f7f0e2;
+      --gold:#c69a45; --white:#fffdf8;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Georgia,serif;background:var(--cream);color:var(--dark);line-height:1.6}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,240,226,.96);backdrop-filter:blur(8px);border-bottom:1px solid #ddd2bd}
+    nav{max-width:1150px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:bold;color:var(--green);font-size:18px}
+    nav a{color:var(--dark);text-decoration:none;font-family:Arial,sans-serif;font-size:14px;margin-left:20px}
+    .nav-btn{background:var(--red);color:white!important;padding:10px 16px;border-radius:8px}
+    .hero{max-width:1150px;margin:auto;padding:48px 20px 75px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-block;color:var(--green);font-family:Arial,sans-serif;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin-bottom:14px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:0 0 22px}
+    h1 span{color:var(--red)}
+    .lead{font-size:20px;max-width:650px}
+    .price{font-family:Arial,sans-serif;font-weight:800;font-size:38px;margin:25px 0 6px}
+    .small{font-family:Arial,sans-serif;color:#6b675d;font-size:14px}
+    .cta{display:inline-block;margin-top:22px;background:var(--red);color:white;text-decoration:none;font-family:Arial,sans-serif;font-weight:bold;padding:15px 24px;border-radius:9px;box-shadow:0 8px 20px #8f221f33}
+    .photo{border-radius:18px;overflow:hidden;box-shadow:0 18px 45px #3b2b1b26;border:7px solid #fff8ed}
+    .photo img{display:block;width:100%;height:auto}
+    section{padding:78px 20px}
+    .container{max-width:1050px;margin:auto}
+    .center{text-align:center}
+    h2{font-size:40px;line-height:1.15;margin:0 0 16px}
+    .subtitle{max-width:720px;margin:0 auto 42px;font-size:18px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:var(--white);border:1px solid #e3d9c7;border-radius:15px;padding:28px;text-align:center}
+    .icon{font-size:42px}
+    .card h3{font-size:24px;margin:8px 0}
+    .story{background:#e5ddc9}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .story-box{background:var(--green);color:white;border-radius:18px;padding:38px}
+    .story-box h3{font-size:31px;margin-top:0}
+    .delivery{background:var(--dark);color:white}
+    .delivery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
+    .delivery-item{border:1px solid #ffffff33;border-radius:14px;padding:24px;background:#ffffff0d}
+    .delivery-item strong{display:block;font-size:20px;margin-bottom:6px}
+    .order{background:var(--white)}
+    .order-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:start}
+    .box{background:#faf7ef;border:1px solid #e1d6c2;border-radius:15px;padding:30px}
+    label{display:block;font-family:Arial,sans-serif;font-weight:bold;font-size:14px;margin:14px 0 6px}
+    input,textarea,select{width:100%;padding:13px;border:1px solid #cfc5b4;border-radius:8px;background:white;font-size:16px;font-family:Arial,sans-serif}
+    textarea{resize:vertical}
+    .qty{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .total{font-family:Arial,sans-serif;font-size:22px;font-weight:bold;margin:18px 0}
+    button{border:0;cursor:pointer;width:100%;padding:15px;background:var(--red);color:white;border-radius:9px;font-size:17px;font-weight:bold}
+    .twint{border:2px solid var(--green);border-radius:12px;padding:20px;margin-bottom:20px;background:#f7fbf3}
+    .twint strong{font-family:Arial,sans-serif}
+    .note{font-size:13px;color:#6e685c;font-family:Arial,sans-serif;margin-top:10px}
+    footer{background:#20271c;color:#ddd;padding:35px 20px;text-align:center;font-family:Arial,sans-serif;font-size:13px}
+    @media(max-width:800px){
+      nav a:not(.nav-btn){display:none}
+      .hero,.story-grid,.order-layout{grid-template-columns:1fr}
+      .cards,.delivery-grid{grid-template-columns:1fr}
+      .hero{padding-top:32px}
+      h2{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">Val Poschiavo • Genuss &amp; Tradition</div>
+    <div>
+      <a href="#produkt">Produkt</a>
+      <a href="#lieferung">Lieferung</a>
+      <a class="nav-btn" href="#bestellen">Bestellen</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="produkt">
+    <div>
+      <div class="eyebrow">Genuss aus dem Val Poschiavo 🇨🇭</div>
+      <h1>Spaghetti, <span>Salsa di Pomodoro</span> e Pesteda</h1>
+      <p class="lead">
+        Eine besondere Kombination aus Pasta, würziger Tomatensauce und
+        Pesteda – inspiriert von der Tradition der Valposchiavo.
+      </p>
+      <div class="price">CHF 24.90</div>
+      <div class="small">pro Paket</div>
+      <a class="cta" href="#bestellen">Jetzt bestellen</a>
+    </div>
+    <div class="photo">
+      <img src="produkt.jpg" alt="Spaghetti mit Salsa di Pomodoro und Pesteda della Valposchiavo">
+    </div>
+  </section>
+
+  <section>
+    <div class="container center">
+      <h2>Das steckt im Paket</h2>
+      <p class="subtitle">Drei Zutaten für einen Teller mit echtem Geschmack aus der Region.</p>
+      <div class="cards">
+        <article class="card"><div class="icon">🍝</div><h3>Spaghetti</h3><p>Die klassische Pasta-Basis für dein Valposchiavo-Erlebnis.</p></article>
+        <article class="card"><div class="icon">🍅</div><h3>Salsa di Pomodoro</h3><p>Herzhafte Tomatensauce als perfekte Begleitung zu den Spaghetti.</p></article>
+        <article class="card"><div class="icon">🌿</div><h3>Pesteda</h3><p>Die charakteristische Spezialität aus dem Val Poschiavo verleiht dem Gericht seine besondere Note.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="container story-grid">
+      <div>
+        <h2>Ein Stück Val Poschiavo für zu Hause</h2>
+        <p>
+          Italienische Esskultur trifft auf die alpine Tradition des Puschlavs.
+          Das Paket ist ideal für alle, die regionale Spezialitäten entdecken
+          und einen besonderen Pasta-Abend geniessen möchten.
+        </p>
+      </div>
+      <div class="story-box">
+        <h3>Tradizione e gusto</h3>
+        <p>
+          Mit viel Liebe zur Region zusammengestellt und persönlich vom
+          Inhaber geliefert.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="delivery" id="lieferung">
+    <div class="container center">
+      <h2>Persönliche Lieferung</h2>
+      <p class="subtitle">Dein Paket kommt persönlich vom Inhaber zu dir. Eine Abholung ist nicht möglich.</p>
+      <div class="delivery-grid">
+        <div class="delivery-item"><strong>🚗 Persönlich geliefert</strong>Direkte Lieferung durch den Inhaber.</div>
+        <div class="delivery-item"><strong>💳 TWINT</strong>Bezahlung per TWINT ist vorgesehen.</div>
+        <div class="delivery-item"><strong>📦 CHF 24.90</strong>Preis pro Paket.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="bestellen">
+    <div class="container">
+      <div class="center">
+        <h2>Deine Bestellung</h2>
+        <p class="subtitle">Fülle das Formular aus. Die Bestellung wird per E-Mail an den Inhaber vorbereitet.</p>
+      </div>
+
+      <div class="order-layout">
+        <div class="box">
+          <h3>TWINT</h3>
+          <div class="twint">
+            <strong>TWINT-Zahlung</strong>
+            <p>Die TWINT-Zahlung wird beim Bestellabschluss bestätigt.</p>
+            <p class="note">Für die endgültige Online-Zahlung muss hier noch dein persönlicher TWINT-Zahlungslink oder TWINT-QR-Code hinterlegt werden.</p>
+          </div>
+          <h3>Lieferung</h3>
+          <p>Persönliche Lieferung durch den Inhaber. Keine Abholung.</p>
+          <p class="note">Lieferkosten sind auf dieser Version noch nicht eingetragen.</p>
+        </div>
+
+        <div class="box">
+          <form id="orderForm">
+            <label for="name">Vor- und Nachname</label>
+            <input id="name" required placeholder="Max Muster">
+
+            <label for="email">E-Mail</label>
+            <input id="email" type="email" required placeholder="max@beispiel.ch">
+
+            <label for="phone">Telefon</label>
+            <input id="phone" type="tel" required placeholder="+41 ...">
+
+            <label for="address">Lieferadresse</label>
+            <textarea id="address" rows="3" required placeholder="Strasse, PLZ, Ort"></textarea>
+
+            <label for="quantity">Anzahl Pakete</label>
+            <select id="quantity">
+              <option value="1">1 Paket</option>
+              <option value="2">2 Pakete</option>
+              <option value="3">3 Pakete</option>
+              <option value="4">4 Pakete</option>
+              <option value="5">5 Pakete</option>
+            </select>
+
+            <div class="total">Total: CHF <span id="total">24.90</span></div>
+
+            <button type="submit">Bestellung per E-Mail senden</button>
+            <p id="result" class="note"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>Genuss aus dem Val Poschiavo</div>
+  <div style="margin-top:8px">Kontakt: gian mattia.lanfranchi@gmail.com</div>
+</footer>
+
+<script>
+  const price = 24.90;
+  const quantity = document.getElementById('quantity');
+  const total = document.getElementById('total');
+  const form = document.getElementById('orderForm');
+  const result = document.getElementById('result');
+
+  quantity.addEventListener('change', () => {
+    total.textContent = (price * Number(quantity.value)).toFixed(2);
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const qty = Number(quantity.value);
+    const amount = (price * qty).toFixed(2);
+
+    const subject = encodeURIComponent('Neue Bestellung – Pasta-Paket Val Poschiavo');
+    const body = encodeURIComponent(
+      `Neue Bestellung\n\n` +
+      `Name: ${name}\n` +
+      `E-Mail: ${email}\n` +
+      `Telefon: ${phone}\n` +
+      `Lieferadresse: ${address}\n` +
+      `Anzahl Pakete: ${qty}\n` +
+      `Total: CHF ${amount}\n\n` +
+      `Zahlung: TWINT`
+    );
+
+    window.location.href =
+      `mailto:gian%20mattia.lanfranchi@gmail.com?subject=${subject}&body=${body}`;
+
+    result.textContent = 'Dein E-Mail-Programm wird geöffnet. Bitte die vorbereitete Bestellung absenden.';
+  });
+</script>
+
+</body>
+</html>
